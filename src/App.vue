@@ -16,12 +16,7 @@ export default {
     },
     ...mapMutations(['setToken'])
   },
-  created() {
-    // console.log(window.localStorage.getItem('token'));
-    // if (window.localStorage.getItem('token') === null || window.localStorage.getItem('token') === undefined) {
-    //   this.getToken();
-    // }
-  }
+  created() {}
 };
 </script>
 <style lang="less">

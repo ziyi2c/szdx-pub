@@ -9,7 +9,6 @@ import * as echarts from 'echarts';
 // axios.defaults.baseURL = 'http://127.0.0.1:4100/szdx'
 axios.defaults.baseURL = 'http://zezo.top:4100/szdx'
 axios.interceptors.request.use(config => {
-  // console.log(window.localStorage.getItem('token'));
   const token = window.localStorage.getItem('token');
   config.headers.Authorization = 'Bearer ' + token;
   return config
@@ -26,7 +25,6 @@ axios.interceptors.response.use(config => {
   if (error.response.status === 401) {
     console.log('token 已过期');
     localStorage.clear();
-    // console.log(window.localStorage.getItem('token'));
     window.location.href('/')
   }
 })

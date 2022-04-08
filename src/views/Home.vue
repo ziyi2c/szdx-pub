@@ -67,7 +67,7 @@ export default {
       this.gw = res.data;
     },
     async getToken() {
-      await this.$http.post('/token', { user: '1940510102', pwd: 'zezo0000' }).then(resp => {
+      await this.$http.post('/token', { user: 'username', pwd: 'password' }).then(resp => {
         const { data: res } = resp;
         console.log(res);
         window.localStorage.setItem('token', res.token);
