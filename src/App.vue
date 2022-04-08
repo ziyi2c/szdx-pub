@@ -6,7 +6,7 @@ import { mapMutations } from 'vuex';
 export default {
   methods: {
     async getToken() {
-      await this.$http.post('/token', { user: '1940510102', pwd: 'zezo0923' }).then(resp => {
+      await this.$http.post('/token', { user: 'yourusername', pwd: 'yourpassword' }).then(resp => {
         const { data: res } = resp;
         console.log(res);
         window.localStorage.setItem('token', res.token);
